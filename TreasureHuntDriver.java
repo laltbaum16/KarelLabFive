@@ -11,15 +11,10 @@ import java.util.Random;
 public class TreasureHuntDriver implements Directions
 {
     public static void main(String args[])  {
-
-        //Your code goes below here:
         TreasureBot karel = new TreasureBot(2, 2, North, 0);  
         karel.findTreasure();
-        
         karel.turnOff();  
     } 
-    
-    
     static {
         int world = (int)(Math.random()*3+1);
         World.reset(); 
