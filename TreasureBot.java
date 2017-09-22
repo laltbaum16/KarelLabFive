@@ -11,25 +11,25 @@ public class TreasureBot extends Robot {
     }
     public void findTreasure() {
         int beeperCount = 0;
-        if(beeperCount == 5) {
-            turnOff();
-        }
         while(beeperCount != 5) {
             while(nextToABeeper()) {
                 pickBeeper();
-                beeperCount++;
-                if(beeperCount == 1) {
-                            faceNorth();
-                }
-                if(beeperCount == 2) {
-                            faceEast();
-                }
-                if(beeperCount == 3) {
-                            faceSouth();
-                }
-                if(beeperCount == 4) {
-                            faceWest();
-                } 
+                beeperCount++; 
+            }
+            if(beeperCount == 1) {
+                faceNorth();
+            }
+            if(beeperCount == 2) {
+                faceEast();
+            }
+            if(beeperCount == 3) {
+                faceSouth();
+            }
+            if(beeperCount == 4) {
+                faceWest();
+            }
+            if(beeperCount == 5) {
+                turnOff();
             }
             beeperCount = 0;
             while(!nextToABeeper()) {
